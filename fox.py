@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
 s1 = "The quick brown fox jumps over the lazy dog."   
 s2 = s1[:3]   
