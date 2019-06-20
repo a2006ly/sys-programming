@@ -10,7 +10,7 @@ s='h' + s[1:]
 print(s)
 
 s="Hello"
-s[0]='h' #文字列の場合、indexで変更できません!!!!
+#s[0]='h' #文字列の場合、indexで変更できません!!!!
 print(s[0])
 
 s="Hello"
