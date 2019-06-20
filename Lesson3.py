@@ -250,5 +250,5 @@ def test(a):
         while (a % int(i) == 0):
             return l[i]
         break
-    ｃ
+
 test(30)
