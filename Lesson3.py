@@ -1,20 +1,20 @@
 # -*- conding:utf-8 -*-
 
 #文字列処理
-s="Hello"
-s='Howdy'
+s = "Hello"
+s = 'Howdy'
 print(s)
 
-s="Hello"
-s='h' + s[1:]
+s = "Hello"
+s = 'h' + s[1:]
 print(s)
 
-s="Hello"
+s = "Hello"
 #s[0]='h' #文字列の場合、indexで変更できません!!!!
 print(s[0])
 
-s="Hello"
-s=s.lower()
+s = "Hello"
+s = s.lower()
 print(s)
 
 print('e' in s)
@@ -99,9 +99,9 @@ def fix_first(s):
     f = ""
     for i in range(len(s)):
         if i != 0 and s[0] == s[i] :
-            f = f+"*"
+            f = f + "*"
         else:
-            f = f+s[i]
+            f = f + s[i]
     return f
 
 print(fix_first("not aaa bnandn"))
@@ -124,9 +124,9 @@ print(not_bad(" not is bad"))
 
 #match_end.py
 def match_end(s):
-    strCount=0
+    strCount = 0
     for str in s:
-        #2文字以上   
+        #2文字以上
         if len(str) >= 2:
             if str[0] == str[-1]:
                 strCount += 1
@@ -139,26 +139,26 @@ print(match_end(["","aba","","",""]))
 
 #front_x.py
 def front_x(x):	
-    l  = list(x)
+    l = list(x)
     l.sort(key=lambda s:s.startswith("x"),reverse=True)
     return l
 
 #front_x.py
 def front_x(x):	
-    l  = list(x)
+    l = list(x)
     return  sorted()
 
 print(front_x(['bbb',	'ccc',	'axx',	'xzz',	'xaa']))	
 print(front_x(['ccc',	'bbb',	'aaa',	'xcc',	'xaa']))	
 print(front_x(['mix',	'xyz',	'apple',	'xanadu',	'aardvark']))
 
-l =[1,2,2,2,2]
+l = [1,2,2,2,2]
 print(l)
 
 
 #remove_adjacent.py
 def remove_adjacent(li):	
-    reList=[]
+    reList = []
     for str in list(li):
         if li.count(str) > 1:
             li.remove(str)
@@ -179,16 +179,76 @@ print(linear_merge(['aa',	'xx'],	['bb',	'cc',	'zz']))
 print(linear_merge(['aa',	'aa'],	['aa',	'bb',	'bb']))
 
 #辞書
-ip_adrs	=	{'aiit.ac.jp':	'175.184.120.230',	'g.aiit.ac.jp':	'210.190.118.224'}
+ip_adrs = {'dis.ac.jp':	'175.184.120.230',	'g.dis.ac.jp':	'210.190.118.224'}
 for i in ip_adrs.keys():
     print(i)
 
  #辞書
-ip_adrs	=	{'aiit.ac.jp':	'175.184.120.230',	'g.aiit.ac.jp':	'210.190.118.224'}
+ip_adrs = {'dis.ac.jp':	'175.184.120.230',	'g.dis.ac.jp':	'210.190.118.224'}
 for i in ip_adrs.values():
     print(i)
 
 #辞書
-ip_adrs	=	{'aiit.ac.jp':	'175.184.120.230',	'g.aiit.ac.jp':	'210.190.118.224'}
+ip_adrs = {'dis.ac.jp':	'175.184.120.230',	'g.dis.ac.jp':	'210.190.118.224'}
 for i in ip_adrs.items():
     print(i)
+
+ #ファイル処理
+def file_open_read(fileName):
+     f = open(fileName)
+     str = f.read()
+     print(str)
+     f.close()
+
+
+path = "C:/Users/user/Desktop/workspace/doc/sysp/test.txt"
+file_open_read(path)
+
+
+
+ #ファイル処理
+def file_open_readline(fileName):
+     f = open(fileName)
+     while True:
+         str = f.readline()
+         if not str:
+            f.close()
+            break
+         else:
+            print(str.strip())
+
+
+path = "C:/Users/user/Desktop/workspace/doc/sysp/test.txt"
+file_open_readline(path)
+
+ #ファイル処理
+def file_open_readlines(fileName):
+     f = open(fileName)
+     str = f.readlines()
+     for i in str:
+         print(i.strip())
+
+path = "C:/Users/user/Desktop/workspace/doc/sysp/test.txt"
+file_open_readlines(path)
+
+
+
+ #ファイル処理書込み
+def file_open_write(fileName):
+     f = open(fileName,mode="w")
+     str = f.write("test")
+     f.close()
+
+
+path = "C:/Users/user/Desktop/workspace/doc/sysp/test.txt"
+file_open_write(path)
+
+#fizz_buzz 作成
+def test(a):
+    l = {"15":"aaa","5":"bbb","3":"ccc"}
+    for i in l.keys():
+        while (a % int(i) == 0):
+            return l[i]
+        break
+    ｃ
+test(30)
