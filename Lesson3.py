@@ -248,7 +248,13 @@ def test(a):
     l = {"15":"aaa","5":"bbb","3":"ccc"}
     for i in l.keys():
         while (a % int(i) == 0):
-            return l[i]
-        break
+             return l[i]
+    return a
 
-test(30)
+
+print(test(30))
+print(test(1))
+print(test(3))
+print(test(5))
+print(test(15))
+print(test(16))
