@@ -26,8 +26,8 @@ else:
 i = 0
 while True:
     try:
-        lineword = f.readline()
-    except:
+        lineword = f.readline() #ctrl+cの時、KeyboardInterruptエラーが発生可能
+    except: # KeyboardInterrupt 例外を捕まえれば OK です 
         sys.exit(1)
     else:
         if not lineword:
