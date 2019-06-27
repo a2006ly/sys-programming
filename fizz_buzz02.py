@@ -53,14 +53,13 @@ while i <= 200:
 
 
 
-
 '''
 実現方法2
     whileの判定が真のときにのみ、キー対応の値を返す
     以外の場合、空文字を返す
 '''
 
-def fb(n):
+def fb2(n):
     dic = {15:"FizzBuzz",5:"Buzz",3:"Fizz"}
     for key in dic.keys():
         while (n % key == 0):
@@ -69,7 +68,7 @@ def fb(n):
 
 i = 1
 while i <= 200:
-    print(i,fb(i))
+    print(i,fb2(i))
     i = i + 1
 
 
@@ -80,7 +79,7 @@ while i <= 200:
     以外の場合、空文字を返す
 '''
 
-def fb(n):
+def fb3(n):
     dic = {15:"FizzBuzz",5:"Buzz",3:"Fizz"}
     try:
        ll = list(filter(lambda x : n % x == 0, map(lambda k:k,dic.keys())))
@@ -90,5 +89,5 @@ def fb(n):
 
 i = 1
 while i <= 200:
-    print(i,fb(i))
+    print(i,fb3(i))
     i = i + 1
