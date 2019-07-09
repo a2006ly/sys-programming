@@ -258,3 +258,145 @@ print(test(3))
 print(test(5))
 print(test(15))
 print(test(16))
+
+lst = [1,2,3,4]
+
+def f(n):
+    return n * 3
+
+print([f(x) for x in lst  if f(x) % 2 == 0])
+
+print([y for y in (f(x) for x in lst) if y % 2 == 0])
+
+#事前定義済み
+print(list(filter(lambda y: y % 2 == 0, map(f, lst))))
+
+
+
+
+#fizz_buzz 作成
+def test(a):
+    l = {"15":"aaa","5":"bbb","3":"ccc"}
+    for i in l.keys():
+        while (a % int(i) == 0):
+             return l[i]
+    return a
+
+def test(a):
+    la = {3:"aaa",5:"bbb",15:"ccc"}
+    fa = map(lambda x:x,la)
+    fl = filter(lambda y :a % y == 0,la)
+    try:
+       ll = list(fl)
+       print(ll[len(ll) - 1])
+       print(la[ll[len(ll) - 1]])
+    except :
+       print("")
+    
+
+print(test(30))
+
+
+print(test(1))
+print(test(3))
+print(test(5))
+print(test(15))
+
+
+
+def fb(n):
+    dic = {15:"FizzBuzz",5:"Buzz",3:"Fizz"}
+    try:
+       ll = list(filter(lambda x : n % x == 0, map(lambda k:k,dic.keys())))
+       return dic[ll[0]]
+    except :
+       return ""
+
+i = 1
+while i <= 200:
+    print(i,fb(i))
+    i = i + 1
+
+
+
+
+ls = [1,2,3]
+ls.insert(0,5)
+print(ls)
+
+
+a = "{:02d}{}".format(1000,"hello")
+print(a)
+
+
+a = "{:+012.3f}{}".format(5,"hello")
+print(a)
+
+for i in range(10):
+    print(i)
+
+def vlen(a, b):
+    return len(a) - len(b)
+
+
+
+ls = ["aaa","ddddddd","ccc","edssee","ffsdddddddddddf","dsdfsfdd","f333333ff"]
+sorted(ls,cmp=lambda a,b : len(a)-len(b))
+
+print(ls)
+
+
+dic = {1:"a",2:"b"}
+
+for i in dic.keys():
+    print(i)
+
+
+for i in dic.values():
+    print(i)
+
+for k,v in dic.items():
+    print(k,'>',v)
+
+
+
+import sys
+
+if len(sys.argv) > 1:
+    try:
+        f = open(sys.argv[1],"rU")
+    except IOError:
+        print("Sorry, the file " + sys.argv[1] + " does not exist.",    file=sys.stderr)
+        sys.exit(1)
+else:
+    f = sys.stdin
+
+
+#ファイルのテスト
+def test(li):
+    sum = 0
+    index = 0
+    for i in li:
+        if i != 7:
+            sum += i
+            index += 1
+        else:
+            if index + 1 <= len(li) - 1:
+                li[index + 1] = li[index + 1] * 2
+                sum += i
+    return sum
+
+print(test([1,7,7,6,9]))
+print(test([1,7,7,6,9]))
+print(test([1,1,1,1,1]))
+
+
+import re
+
+str = "c,2,a,b,c,9"
+pattern = re.compile("\d")
+ret = pattern.match(str)
+print(ret)
+ret = re.search("\d",str)
+print(ret.group())
+
