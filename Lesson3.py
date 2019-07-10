@@ -341,7 +341,7 @@ def vlen(a, b):
 
 
 ls = ["aaa","ddddddd","ccc","edssee","ffsdddddddddddf","dsdfsfdd","f333333ff"]
-sorted(ls,cmp=lambda a,b : len(a)-len(b))
+sorted(ls,cmp=lambda a,b : len(a) - len(b))
 
 print(ls)
 
@@ -400,3 +400,43 @@ print(ret)
 ret = re.search("\d",str)
 print(ret.group())
 
+
+import re
+
+p = re.compile("[012345678]")
+r = p.search("234")
+print(r.group())
+all = p.findall("234")
+print(all)
+tt = p.match("234")
+print(tt)
+
+p = re.compile("(aa|bb)test")
+r = p.search("ffftest")
+if not r == None :
+    print(r.group())
+
+r1 = p.search("bbtest.git")
+if not r1 == None :
+    print(r1.group())
+
+
+
+f = re.sub(p,"cc","bbtestaatestPcccc")
+print(f)
+
+
+class A:
+    def __init__(self):
+        self.parm1 = "1"
+        self.parm2 = "2"
+
+    def  test(self):
+        print("12345")
+
+a = A()
+a.test()
+
+p = re.compile("aa*")
+r = p.search("bbbaaaa")
+print(r.group())
