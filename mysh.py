@@ -9,7 +9,6 @@ while True:
     cmd = input();
     if cmd == "exit":
         break
-    print(cmd)
     
     pwd = os.getcwd()
     cmds = cmd.split()
