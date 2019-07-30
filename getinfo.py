@@ -56,8 +56,8 @@ class GetData():
 
 if __name__ == "__main__":
 
-    print("都道府県の市区町情報を取得",end = "")
-    print("---例：getinfo.py 東京都 渋谷区")
+    print("都道府県の市区町情報を取得","---例：getinfo.py 東京都 渋谷区")
+    print()
     
     querystr = ""
     querycityName = ""
