@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
 """
         都道府県の市区町情報を取得
         例①：東京都の渋谷区の情報取得の場合、下記のコマンドを実行
@@ -45,6 +44,7 @@ class GetData():
                 return ret[0].text
             else:
                  return "WiKI紹介情報が見つかりません。"
+
     def checkExists(self,v,list):
         ret = False
         for tempV in list:
@@ -70,10 +70,10 @@ if __name__ == "__main__":
         querystr = sys.argv[1]
         querycityName = '-'
     else:
-        #querystr = '東京都'
-        #querycityName = '渋谷区'
-        querystr = '北海道'
-        querycityName = '-'
+        querystr = '東京都'
+        querycityName = '渋谷区'
+        #querystr = '北海道'
+        #querycityName = '-'
 
     HEADERS = {'X-API-KEY': 'EI2doWypPuoGk0G9eV8DNmuqqjPn4kaWvqCJNnaN'} #キー
 
