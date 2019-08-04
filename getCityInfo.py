@@ -116,7 +116,7 @@ if __name__ == "__main__":
                 print("■{}の{} 一人当たり地方税2008-2016年（毎年）".format(querystr,cityName))
                 citytaxes = gcdata.getPrefList(URL4,"d")
                 for taxe in citytaxes:
-                    print("    {}年： {} 千円".format(taxe['year'],taxe['value']))
+                    print("    {}年： {:>12,} 千円".format(taxe['year'],taxe['value']))
                 print()
 
                 baseUrl = 'https://opendata.resas-portal.go.jp/api/v1/municipality/wages/perYear?'
@@ -125,7 +125,7 @@ if __name__ == "__main__":
                 print("■{}の{} 一人当たり賃金5:30～34歳（毎年）".format(querystr,cityName))
                 citymunicipality = gcdata.getPrefList(URL5,"d")
                 for municipality in citymunicipality:
-                    print("    {}年： {} 万円".format(municipality['year'],municipality['value']))
+                    print("    {}年： {:>12,} 万円".format(municipality['year'],municipality['value']))
                 print()
         
                 baseUrl = 'https://opendata.resas-portal.go.jp/api/v1/townPlanning/estateTransaction/bar?'
