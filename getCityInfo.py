@@ -100,7 +100,8 @@ if __name__ == "__main__":
                     if ret:
                         cityName = querycityName
                     else:
-                            print("「 {} 」都道府県の「{}」市区町村が見つかりません、再確認ください。".format(querystr,querycityName))
+                            print("「 {} 」都道府県の「{}」市区町村が見つかりません、再確認ください。"
+                                    .format(querystr,querycityName))
                             break
 
                 URL3 = baseUrl3.format(cityName)
