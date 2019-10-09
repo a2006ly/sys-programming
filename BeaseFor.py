@@ -325,7 +325,7 @@ ls.insert(0,5)
 print(ls)
 
 
-a = "{:02d}{}".format(1000,"hello")
+a = "{:05d}{}".format(1000,"hello")
 print(a)
 
 
@@ -395,8 +395,10 @@ import re
 
 str = "c,2,a,b,c,9"
 pattern = re.compile("\d")
+#match 頭からmatch
 ret = pattern.match(str)
 print(ret)
+#全行マッチ,見つかったら、後ろにすすまない。
 ret = re.search("\d",str)
 print(ret.group())
 
@@ -405,9 +407,12 @@ import re
 
 p = re.compile("[012345678]")
 r = p.search("234")
+
 print(r.group())
+
 all = p.findall("234")
 print(all)
+
 tt = p.match("234")
 print(tt)
 
