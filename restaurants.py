@@ -1,4 +1,4 @@
-mport urllib.request
+import urllib.request
 import urllib.parse
 from xml.etree.ElementTree import ElementTree
 

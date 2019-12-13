@@ -405,9 +405,8 @@ print(ret.group())
 
 import re
 
-p = re.compile("[012345678]")
+p = re.compile("[0115678234]")
 r = p.search("234")
-
 print(r.group())
 
 all = p.findall("234")

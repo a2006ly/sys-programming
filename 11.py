@@ -13,7 +13,7 @@ print(c1.group())
 
 p = re.compile("(\d)([A-Z]{2})")
 c1 = p.search(str)
-print(c1.group(2))
+print(c1.group())
 
 print(re.split("\d",str))
 
@@ -65,3 +65,7 @@ print(p)
 p = ct + datetime.timedelta(days=2)
 
 print(p)
+
+
+ct = datetime.datetime
+print(ct.strftime("%Y-%M-%d"))

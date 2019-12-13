@@ -122,6 +122,7 @@ if __name__ == "__main__":
 
                 baseUrl = 'https://opendata.resas-portal.go.jp/api/v1/municipality/wages/perYear?'
                 param = 'prefCode={}&simcCode=-&wagesAge=5&sicCode=-'.format(prefCode)
+                
                 URL5 = baseUrl + param
                 print("■{}の{} 一人当たり賃金5:30～34歳（毎年）".format(querystr,cityName))
                 citymunicipality = gcdata.getPrefList(URL5,"d")
